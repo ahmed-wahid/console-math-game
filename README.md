@@ -133,7 +133,7 @@ After the game ends, the program displays the results including the number of co
 ## Project Structure
 
 ```
-main.cpp
+projectMathGame.cpp
 ```
 
 Classes used in the program:
