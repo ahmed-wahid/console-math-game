@@ -96,14 +96,14 @@ Examples:
 ### Using g++
 
 ```bash
-g++ -std=c++17 main.cpp -o math_game
-math_game.exe
+g++ -std=c++17  projectMathGame.cpp -o math_game
+m.exe
 ```
 
 ### Using MSVC
 
 ```bash
-cl main.cpp
+cl projectMathGame.cpp
 main.exe
 ```
 
