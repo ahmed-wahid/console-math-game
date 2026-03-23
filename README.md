@@ -81,33 +81,8 @@
 
 ## Requirements
 
-* Windows operating system (uses Windows console API)
 * C++ compiler supporting C++11 or later
 
-Examples:
-
-* g++
-* Microsoft Visual C++ (MSVC)
-
----
-
-## Build and Run
-
-### Using g++
-
-```bash
-g++ -std=c++17  projectMathGame.cpp -o math_game
-m.exe
-```
-
-### Using MSVC
-
-```bash
-cl projectMathGame.cpp
-main.exe
-```
-
----
 
 ## Example Gameplay
 
