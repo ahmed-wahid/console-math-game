@@ -3,11 +3,9 @@
 ## Demo
 
 <img src="Math_game.gif" width="600">
-> “Clarity beats complexity.”
 
 
 
-# MathMaster CLI
 
 A structured, object-oriented arithmetic training application built for the command line.
 
