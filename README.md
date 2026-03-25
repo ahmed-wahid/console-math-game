@@ -3,141 +3,129 @@
 ## Demo
 
 <img src="Math_game.gif" width="600">
+> “Clarity beats complexity.”
+
+
+
+# MathMaster CLI
+
+A structured, object-oriented arithmetic training application built for the command line.
 
 ---
 
-## A console-based C++ math game that generates random arithmetic questions based on selected difficulty levels and operators. Designed for the Windows terminal with colored feedback for correct and wrong answers, and a summary for each game session. Demonstrates basic C++ concepts such as OOP, random number generation, and input validation.
+## Overview
+
+**MathMaster CLI** is a C++ console application designed to help users practice arithmetic in a structured way. It applies Object-Oriented Programming (OOP) principles and uses the modern C++ `<random>` library to generate reliable and varied question sets.
+
+The goal of the project is to improve calculation speed and accuracy through repeated, customizable practice sessions.
 
 ---
 
-## Features
+## Key Features
 
-* Multiple games in one session
-* Custom number of questions per game
-* Difficulty levels:
+* **Tiered Difficulty System**
+  Supports Easy (single-digit), Medium (double-digit), and Hard (triple-digit), along with a Mix mode for randomized difficulty.
 
-  * Easy
-  * Medium
-  * Hard
-  * Mixed
-* Arithmetic operations:
+* **Arithmetic Operations**
+  Includes Addition, Subtraction, Multiplication, and Division, with a Mix mode for random operations.
 
-  * Addition
-  * Subtraction
-  * Multiplication
-  * Division
-  * Random mix of operations
-* Colored terminal output for:
+* **Real-time Feedback**
+  Uses Windows console coloring to indicate correct (green) and incorrect (red) answers.
 
-  * Correct answers
-  * Wrong answers
-  * Game results
-* Game statistics:
+* **Session Statistics**
+  Tracks performance across questions and games, including wins, losses, and draws.
 
-  * Wins
-  * Draws
-  * Losses
+* **Modern Randomization**
+  Uses `std::mt19937` from `<random>` instead of `rand()` for better randomness.
 
 ---
 
-## How the Game Works
+## Technical Specifications
 
-1. The program starts by asking the player how many games they want to play.
-2. For each game the player selects:
-
-   * Number of questions
-   * Difficulty level
-   * Arithmetic operation type
-3. The program generates random math questions.
-4. The player answers each question.
-5. The program shows whether the answer is correct or incorrect.
-6. After each game, a summary is displayed.
-7. After all games are finished, a final session summary is shown.
+* **Language**: C++11 or higher
+* **Platform**: Windows (required for `Windows.h`)
+* **Libraries Used**: `<random>`, `<thread>`, `<chrono>`, `<iostream>`, `<string>`
 
 ---
 
-## Difficulty Levels
+## Installation and Execution
 
-| Level  | Description               |
-| ------ | ------------------------- |
-| Easy   | Small numbers             |
-| Medium | Medium-sized numbers      |
-| Hard   | Large numbers             |
-| Mix    | Random level per question |
+### Prerequisites
 
----
+A C++ compiler such as MSVC, MinGW, or Clang installed on a Windows system.
 
-## Operations
+### Compilation
 
-| Code | Operation          |
-| ---- | ------------------ |
-| 0    | Addition (+)       |
-| 1    | Subtraction (-)    |
-| 2    | Multiplication (*) |
-| 3    | Division (/)       |
-| 4    | Random Operation   |
+```bash
+g++ main.cpp -o MathGame.exe
+```
+
+### Running the Application
+
+```bash
+./MathGame.exe
+```
 
 ---
 
-## Requirements
+## Class Architecture
 
-* C++ compiler supporting C++11 or later
+### Question Class
 
+* **Responsibility**: Handles question generation and validation
+* **Key Functions**:
 
-## Example Gameplay
+  * Generates numbers based on difficulty
+  * Selects operations
+  * Computes correct answers
+
+### Math_Game Class
+
+* **Responsibility**: Controls the game flow and session logic
+* **Key Functions**:
+
+  * Manages game loops
+  * Tracks scores
+  * Displays results and summaries
+
+---
+
+## Configuration Reference
+
+| Setting          | Range/Options      | Description                  |
+| ---------------- | ------------------ | ---------------------------- |
+| Games Count      | 1 – 10             | Number of games per session  |
+| Question Count   | 1 – 100            | Questions per game           |
+| Difficulty Level | 0 (Easy) – 3 (Mix) | Controls number range        |
+| Operator Type    | 0 (Plus) – 4 (Mix) | Selects arithmetic operation |
+
+---
+
+## Limitations
+
+* Windows-only due to `Windows.h`
+* Division is integer-based (no floating-point results)
+* Limited input validation (non-numeric input may cause issues)
+
+---
+
+## Example Output
 
 ```
-WELCOME TO MATH GAME
-
-How many games do you want to play (1 to 10)?
-Games: 2
-
-Game 1
-
-How many questions do you want?
-Questions: 5
-
 Question (1 / 5)
-7 + 8 =
+3 + 7 = ?
+> 10
+Right Answer
 ```
-
-After the game ends, the program displays the results including the number of correct answers and whether the player passed, failed, or drew.
 
 ---
 
-## Project Structure
+## Summary
 
-```
-projectMathGame.cpp
-```
-
-Classes used in the program:
-
-* `Question`
-
-  * Handles question generation
-  * Difficulty levels
-  * Operations
-  * Answer checking
-
-* `Math_Game`
-
-  * Manages game sessions
-  * Tracks results
-  * Displays summaries
+This project demonstrates the use of OOP, random number generation, and basic console UI handling in C++. It is suitable as a practice project for students learning structured program design.
 
 ---
 
-## Possible Improvements
-
-Future improvements could include:
-
-* Saving game results to a file
-* Adding a timer for each question
-* Cross-platform terminal support
-* GUI version of the game
-
----
 
 ## Author
 
